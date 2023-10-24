@@ -30,8 +30,8 @@ namespace figures
         public void Out()
         {
             Console.WriteLine($"Квадрат со сторонами {a}");
-            Console.WriteLine($"Площадь квадрата: {area()}");
-            Console.WriteLine($"Периметр квадрата: {perimeter()}");
+            Console.WriteLine($"Площадь квадрата: {area():f3}");
+            Console.WriteLine($"Периметр квадрата: {perimeter():f3}");
         }
 
     }

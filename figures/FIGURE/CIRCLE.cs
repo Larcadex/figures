@@ -24,8 +24,8 @@ namespace figures
         public void Out()
         {
             Console.WriteLine($"Круг с радиусом {rad}");
-            Console.WriteLine($"Площадь круга: {area()}");
-            Console.WriteLine($"Периметр круга: {perimeter()}");
+            Console.WriteLine($"Площадь круга: {area():f3}");
+            Console.WriteLine($"Периметр круга: {perimeter():f3}");
         }
     }
 }

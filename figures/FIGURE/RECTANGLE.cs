@@ -26,8 +26,8 @@ namespace figures
 
         public void Out()
         {
-            Console.WriteLine($"Площадь прямоугольника: {area()}");
-            Console.WriteLine($"Периметр прямоугольника:  {perimeter()}");
+            Console.WriteLine($"Площадь прямоугольника: {area():f3}");
+            Console.WriteLine($"Периметр прямоугольника:  {perimeter():f3}");
         }
     }
 }

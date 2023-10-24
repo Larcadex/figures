@@ -77,8 +77,8 @@ namespace figures
         public void Out()
         {
             Console.WriteLine($"Треугольник со сторонами {a}, {b}, {c} является {get_type()}.");
-            Console.WriteLine($"Площадь треугольника: {area()}");
-            Console.WriteLine($"Периметр треугольника: {perimeter()}");
+            Console.WriteLine($"Площадь треугольника: {area():f3}");
+            Console.WriteLine($"Периметр треугольника: {perimeter():f3}");
         }
     }
 }
