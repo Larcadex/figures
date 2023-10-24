@@ -14,7 +14,7 @@ namespace figures
         {
             while (true)
             {
-                Console.WriteLine("Выберите фигуру:\n1. Квадрат \n2. Прямоугольник \n3. Треугольник \n4. Круг \n5. Квадратная пирамида \n6. Прямоугольная пирамида \n7. Конус \n8. Треугольная пирамида");
+                Console.WriteLine("Выберите фигуру:\n1. Квадрат \n2. Прямоугольник \n3. Треугольник \n4. Круг \n5. Пирамида");
 
                 ConsoleKeyInfo keyInfo1 = Console.ReadKey(true);
 
@@ -46,27 +46,41 @@ namespace figures
                         break;
                     case ConsoleKey.D5:
                         Console.Clear();
-                        main_square_pyramid(a, b);
-
+                        pyramid_choice(a, b, c);
                         break;
-                    case ConsoleKey.D6:
-                        Console.Clear();
-                        main_rectangle_pyramid(a, b, c);
-
-                        break;
-                    case ConsoleKey.D7:
-                        Console.Clear();
-                        main_cone(a, b, c);
-
-                        break;
-                    case ConsoleKey.D8:
-                        Console.Clear();
-                        main_triangle_pyramid(a, b, c);
-
-                        break;
-
                 }
 
+            }
+        }
+        
+        static void pyramid_choice(double a, double b, double c)
+        {
+            Console.WriteLine("Выберите пирамиду:\n1. Квадратная пирамида \n2. Прямоугольная пирамида \n3. Конус \n4. Треугольная пирамида");
+
+            ConsoleKeyInfo keyInfo2 = Console.ReadKey(true);
+            
+            switch (keyInfo2.Key)
+            {
+                case ConsoleKey.D1:
+                    Console.Clear();
+                    main_square_pyramid(a, b);
+
+                    break;
+                case ConsoleKey.D2:
+                    Console.Clear();
+                    main_rectangle_pyramid(a, b, c);
+
+                    break;
+                case ConsoleKey.D3:
+                    Console.Clear();
+                    main_cone(a, b);
+
+                    break;
+                case ConsoleKey.D4:
+                    Console.Clear();
+                    main_triangle_pyramid(a, b, c);
+
+                    break;
             }
         }
 
@@ -144,9 +158,16 @@ namespace figures
             Console.WriteLine();
         }
 
-        static void main_cone (double a, double b, double c)
+        static void main_cone (double a, double b)
         {
-            Console.WriteLine("NotRealize");
+            Console.WriteLine("Введите радиус круга основания конуса");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите высоту конуса");
+            b = double.Parse(Console.ReadLine());
+            cone pyramid = new cone(a, b);
+            Console.Clear();
+            pyramid.Out();
+            Console.WriteLine();
 
         }
 

@@ -27,11 +27,12 @@ namespace figures
         {
             return (1.0 / 3) * area() * h;
         }
-
+        
         public new void Out()
         {
-            Console.WriteLine($"Полная площадь поверхности пирамиды: {total_surface_area():f2}");
-            Console.WriteLine($"Объем пирамиды: {volume():f2}");
+            Console.WriteLine($"Полная площадь поверхности пирамиды: {total_surface_area():f3}");
+            Console.WriteLine($"Периметр основания пирамиды {perimeter():f3}");
+            Console.WriteLine($"Объем пирамиды: {volume():f3}");
         }
     }
 }
