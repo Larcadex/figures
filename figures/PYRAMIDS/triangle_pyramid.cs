@@ -20,8 +20,8 @@ namespace figures
             private double lateralSurfaceArea()
             {
                 double p = perimeter() / 2;
-                double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c)); // Площадь боковой поверхности треугольника
-                return (1.0 / 2) * perimeter() * h + s; // Площадь основания + Площадь боковой поверхности
+                double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c)); // площадь боковой поверхности треугольника
+                return (1.0 / 2) * perimeter() * h + s; // площадь основания + площадь боковой поверхности
             }
 
             private double volume()

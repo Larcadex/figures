@@ -14,18 +14,14 @@ namespace figures
         {
             this.h = h;
         }
-
-        private double slant_height()
-        {
-            return Math.Sqrt(Math.Pow(rad, 2) + Math.Pow(h, 2));
-        }
+        
 
         private double total_surface_area()
         {
-            double l = slant_height();
+            double l = Math.Sqrt(Math.Pow(rad, 2) + Math.Pow(h, 2));
             double x = Math.PI * rad * l;
 
-            return base.area() + x;
+            return area() + x;
         }
 
         private double volume()
